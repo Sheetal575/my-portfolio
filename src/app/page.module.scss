@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
 .main {
 
   height: 100vh;
   color: black;
-
-  cursor: url('https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-vector-pencil-icon-png-image_925398.jpg'), pointer;
 }
 
-.hero-section{
+.hero-section {
   position: relative;
   height: 100%;
   display: flex;
@@ -15,7 +14,8 @@
   justify-content: center;
   align-items: center;
 }
-.name{
+
+.name {
   font-family: 'Fredericka the Great', cursive;
   font-size: 8vw;
   font-weight: 500;
@@ -25,7 +25,8 @@
   align-items: center;
   flex: 1;
 }
-.socialLinks{
+
+.socialLinks {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
@@ -35,43 +36,86 @@
   flex-direction: column;
   gap: 0rem;
 
-  &>button{
+  &>button {
     padding: 1rem;
     background-color: transparent;
     border: none;
     border-radius: 50%;
 
 
-      // border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    // border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
   }
-  
+
 }
 
-.scroll-button{
+.scroll-button {
   background-color: transparent;
   border: none !important;
   padding: 1.2rem 0.3rem 0.3rem 0.3rem;
   border-radius: 45% !important;
   border: 2px solid black !important;
   margin-bottom: 3rem;
+  cursor: pointer;
 
-  &>img{
+  &>img {
     transform: rotateX(180deg);
-    animation: bounceOnce 2s linear 4s 3;
-    
+    animation: bounceOnce 4s linear 4s 5;
+
   }
- 
+
   @keyframes bounceOnce {
     0% {
       transform: translateY(0) rotateX(180deg);
-  }
-  50% {
-      transform: translateY(-7px) rotateX(180deg); /* Adjust the bounce height as needed */
-  }
-  100% {
+    }
+
+    50% {
+      transform: translateY(-7px) rotateX(180deg);
+      /* Adjust the bounce height as needed */
+    }
+
+    100% {
       transform: translateY(0) rotateX(180deg);
+    }
   }
+
+
 }
 
+.next-link {
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  justify-items: center;
+  &>span {
+    font-size: 1rem;
+  }
 
+
+
+  &__line{
+    content: "hjhj";
+    // position: absolute;
+    // left: 0;
+    width: 3px;
+    height: 0vh;
+    background-color: black;
+   
+
+    /* Adjust thickness as needed */
+    /* Line color */
+    transform-origin: left;
+    line-height: 1.5em;
+    animation: draw 3s linear forwards 1;
+    /* Adjust animation duration as needed */
+  }
+
+  @keyframes draw {
+    0% {
+      height: 0vh;
+    }
+
+    100% {
+      height: 4vh;
+    }
+  }
 }

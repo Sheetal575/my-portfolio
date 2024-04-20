@@ -90,8 +90,14 @@ body {
 body {
   /* background-color: white; */
   height: 100vh;
-  background-image: linear-gradient(180deg, #f1ebdee6, white);
+  background-color: #f7f2eae6;
+  /* background-image: linear-gradient(276deg, #f1ebdee6, rgb(242, 238, 228)); */
+  color: black;
  
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
