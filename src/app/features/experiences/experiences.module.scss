@@ -1,71 +1,141 @@
 .experience {
-    height: 100vh;
-    padding-left: 20rem;
-    padding-top: 6rem;
-    // display: grid;
-    // justify-content: start;
-
-
-    &>div:nth-child(1) {
-        font-size: 3vw;
-        color: rgb(99, 97, 97) !important;
-        font-weight: 500;
-        height: max-content;
-    }
-
-    &> div:nth-child(2){
-        margin-top: 2.5rem;
-    }
-
-    & > div:nth-child(3){
-        margin-left: 4rem;
-        display: grid;
-        gap: 4rem;
-    }
-
-    &-card {
-        width: 50vw;
-        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-        padding: 1em;
-        line-height: 1.5em;
-        height: max-content;
-        border: solid 5px black;
-
-    }
-
-
-}
-
-.hand-drawn-line {
+   height: 100%;
+    padding: 5em;
+    border: solid 5px black;
+    clip-path: inset(0 100% 100% 0);
+    animation: drawBorder 8s forwards;
+    display: grid;
+    justify-items: center;
+    align-items: center;
     position: relative;
-    /* Adjust height as needed */
+    // animation-range: entry 50% contain 50%;
+    // animation-delay: 4s;
 
-}
-
-.hand-drawn-line::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 3px;
-    height: 0vh;
-    border-left: 5px solid;
-    border-image: linear-gradient(to bottom, black 0%, rgb(132, 131, 131) 50%, transparent 100%) 1;
+    &>div:nth-child(1){
+        display: grid;
+        height: 100%;
+        max-width: 70vw;
+        justify-content: center;
     
-    /* Adjust thickness as needed */
-    /* Line color */
-    transform-origin: left;
-    line-height: 1.5em;
-    animation: draw 3s linear forwards ;
-    /* Adjust animation duration as needed */
+        &>div{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: start;
+            gap: 2vw;
+        }
+    }
+
+    &--date{
+        font-size: 14px;
+        color: grey;
+        margin-top: 1em;
+
+    }
+
+    &--title{
+        font-size: 2.3em;
+        margin-bottom: 0.5rem;
+ 
+    }
+
+    &--company{
+        font-size: 1.2em;
+        font-weight: 700;
+        color: grey;
+    }
+
+    &--description{
+        width: 50vw;
+        line-height: 30px;
+        font-size: 1.2em;
+        margin-top: 2rem;
+    }
+
+    @media only screen and (max-width: 900px) {
+        .experience{
+            padding: 2em;
+        }
+        &--date {
+          display: none;
+        }
+
+        &--title{
+            font-size: 1.6em;
+        }
+
+        &--company{
+            font-size: 1em;
+        }
+
+        &--description{
+            width: 100%;
+            font-size: 1em ;
+            line-height: 1.6em;
+        }
+
+        &>div:nth-child(1){
+            width: 90vw;
+        
+            &>div{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        
+      }
+
+
+
+    @keyframes drawBorder {
+        0% {
+            clip-path: inset(0 100% 100% 0);
+
+        }
+
+
+        100% {
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
 }
 
-@keyframes draw {
-    0% {
+.next-link {
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    justify-items: center;
+    
+    &>span {
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  
+  
+  
+    &__line{
+      content: "";
+      // position: absolute;
+      // left: 0;
+      width: 3px;
+      height: 0vh;
+      background-color: black;
+     
+  
+      /* Adjust thickness as needed */
+      /* Line color */
+      transform-origin: left;
+      line-height: 1.5em;
+      animation: draw 3s linear forwards 1;
+      /* Adjust animation duration as needed */
+    }
+  
+    @keyframes draw {
+      0% {
         height: 0vh;
-    }
-
-    100% {
-        height: 70vh;
+      }
+  
+      100% {
+        height: 4vh;
+      }
     }
 }
-

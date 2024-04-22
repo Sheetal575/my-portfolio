@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
 
 .main {
-
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
   height: 100vh;
   color: black;
 }
@@ -88,6 +89,7 @@
   justify-items: center;
   &>span {
     font-size: 1rem;
+    cursor: pointer;
   }
 
 
@@ -118,4 +120,8 @@
       height: 4vh;
     }
   }
+}
+
+.snap-section{
+   scroll-snap-align: start;
 }

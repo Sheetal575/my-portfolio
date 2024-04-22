@@ -4,23 +4,19 @@ import { useEffect, useState } from "react";
 import { Experiences } from "./features/experiences/experiences";
 import styles from "./page.module.scss";
 import Image from "next/image";
+import { Skills } from "./features/skills/skils";
 
 export default function Home() {
 
-  const [scrollYPosition, setScrollYPosition] = useState(0);
 
-const handleScroll = () => {
-  const element = document.getElementById('experience');
-  if (element) {
-    // 👇 Will scroll smoothly to the top of the next section
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+  const handleScroll = () => {
+    const element = document.getElementById('experience');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-
-
-// Now the vertical position is available with `scrollYPosition`
-console.log(scrollYPosition)
 
   const socialLinks = (
     <div className={styles.socialLinks}>
@@ -55,17 +51,26 @@ console.log(scrollYPosition)
     </div>
   );
 
-  
+  const heroSection = (
+    <div className={styles['hero-section']}>
+      <div className={styles.name}>Sheetal Dadhich</div>
+      {nextLink}
+    </div>
+  );
+
   return (
     <>
-      <main className={styles.main}>
+      <section className={styles.main}>
         {socialLinks}
-        <div className={styles['hero-section']}>
-          <div className={styles.name}>Sheetal Dadhich</div>
-          {nextLink}
-        </div>
-      </main>
-      <Experiences />
+        {heroSection}
+      </section>
+      <section id="experience">
+        <Experiences />
+      </section>
+      <section id="skills">
+        <Skills />
+      </section>
+
     </>
   );
 }
