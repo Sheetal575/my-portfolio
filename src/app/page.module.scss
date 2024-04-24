@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
 
 .main {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  height: 100vh;
+
   color: black;
 }
 
 .hero-section {
   position: relative;
-  height: 100%;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,19 +17,20 @@
 }
 
 .name {
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 8vw;
+  font-size: 3em;
   font-weight: 500;
+  width: 70vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   flex: 1;
+ 
 }
 
 .socialLinks {
   position: absolute;
-  top: 50%;
+  top: 35%;
   transform: translate(0, -50%);
   left: 1rem;
 
@@ -125,3 +126,105 @@
 .snap-section{
    scroll-snap-align: start;
 }
+
+
+/* Config */
+$color-bg: white;
+$color-particle: rgba(128, 128, 128, 0.121);
+$spacing: 2560px;
+$time-1: 60s;
+$time-2: 120s;
+$time-3: 180s;
+$time-4: 200s;
+
+/* mixins */
+@function particles($max) {
+  $val: 0px 0px $color-particle;
+  @for $i from 1 through $max {
+    $val: #{$val}, random($spacing)+px random($spacing)+px $color-particle;
+  }
+  @return $val;
+}
+
+@mixin particles($max) {
+  box-shadow: particles($max);
+  border-radius: 50%;
+}
+
+
+.particle, .particle:after {
+ 
+  background: transparent;
+}
+
+.particle:after {
+  position: absolute;
+  content: "";
+  top: $spacing;
+}
+
+.particle_1 {
+  animation: animParticle $time-1 liner infinite;
+  @include particles(100);
+  height: 7px;
+  width: 7px;
+  
+}
+
+.particle_1:after {
+  @include particles(100);
+  height: 7px;
+  width: 7px;
+}
+
+.particle_2 {
+  animation: animParticle $time-2 linear infinite;
+  @include particles(100);
+  height: 7px;
+  width: 7px;
+}
+
+.particle_2:after {
+  @include particles(100);
+  height: 7px;
+  width: 7px;
+}
+
+.particle_3:after {
+  @include particles(100);
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+}
+
+.particle_4 {
+  animation: animParticle $time-4 linear infinite;
+  @include particles(100);
+  height: 7px;
+  width: 7px;
+  
+}
+
+.particle_4:after {
+  @include particles(100);
+  height: 7px;
+  width: 7px;
+}
+
+@keyframes animParticle {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY($spacing * -1);
+  }
+}
+
+.page_wrapper {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+
+

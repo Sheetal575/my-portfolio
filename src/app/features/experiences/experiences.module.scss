@@ -1,18 +1,15 @@
 .experience {
-   height: 100%;
-    padding: 5em;
-    border: solid 5px black;
-    clip-path: inset(0 100% 100% 0);
-    animation: drawBorder 8s forwards;
+    width: 70vw;
+    // padding: 5em;
+    padding: 6em 0em;
     display: grid;
     justify-items: center;
     align-items: center;
     position: relative;
-    // animation-range: entry 50% contain 50%;
-    // animation-delay: 4s;
 
     &>div:nth-child(1){
         display: grid;
+        gap: 4rem;
         height: 100%;
         max-width: 70vw;
         justify-content: center;
@@ -83,59 +80,38 @@
         
       }
 
-
-
-    @keyframes drawBorder {
-        0% {
-            clip-path: inset(0 100% 100% 0);
-
-        }
-
-
-        100% {
-            clip-path: inset(0 0 0 0);
-        }
-    }
-
 }
 
-.next-link {
-    position: absolute;
-    bottom: 0;
-    display: grid;
-    justify-items: center;
-    
-    &>span {
-      font-size: 1rem;
-      cursor: pointer;
-    }
-  
-  
-  
+.heading{
+    width: 70vw;
+    font-size: 1.7em;
+    font-weight: 700;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+
     &__line{
-      content: "";
-      // position: absolute;
-      // left: 0;
-      width: 3px;
-      height: 0vh;
-      background-color: black;
-     
-  
-      /* Adjust thickness as needed */
-      /* Line color */
-      transform-origin: left;
-      line-height: 1.5em;
-      animation: draw 3s linear forwards 1;
-      /* Adjust animation duration as needed */
+        height: 4px;
+        background-image: linear-gradient(to right, black,rgba(139, 134, 134, 0.513));
+        animation: lineWidth 4s linear forwards;
+        // background-color: black;
     }
-  
-    @keyframes draw {
-      0% {
-        height: 0vh;
-      }
-  
-      100% {
-        height: 4vh;
-      }
+
+    @keyframes lineWidth {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 56vw;
+        }
+        
     }
+}
+
+.experience-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    justify-content: center;
 }

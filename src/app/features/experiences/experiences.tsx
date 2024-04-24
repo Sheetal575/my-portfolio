@@ -24,36 +24,28 @@ const experiences = [
 
 export const Experiences = () => {
 
-  const handleScroll = () => {
-    const element = document.getElementById('skills');
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
-  const nextLink = (
-    <div className={styles['next-link']}>
-      <span onClick={handleScroll}>Projects</span>
-      <div className={styles['next-link__line']} ></div>
-    </div>
-  );
 
   return (
-    <div className={styles.experience}>
-      <div>
-        {experiences.map((data) => (
-          <div>
-            <div className={styles['experience--date']}>{data?.date}</div>
-            <div>
-              <div className={styles['experience--title']}>{data?.title}</div>
-              <div className={styles['experience--company']}>{data?.company}</div>
-              <div className={styles['experience--description']}>{data?.description}</div>
-            </div>
-          </div>
-        ))}
+    <div className={styles['experience-box']}>
+      <div className={styles.heading}>
+        Work History
+        <div className={styles.heading__line} />
       </div>
-      {nextLink}
+      <div className={styles.experience}>
+        <div>
+          {experiences.map((data) => (
+            <div>
+              <div className={styles['experience--date']}>{data?.date}</div>
+              <div>
+                <div className={styles['experience--title']}>{data?.title}</div>
+                <div className={styles['experience--company']}>{data?.company}</div>
+                <div className={styles['experience--description']}>{data?.description}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

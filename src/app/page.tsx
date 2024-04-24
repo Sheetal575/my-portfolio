@@ -9,15 +9,6 @@ import { Skills } from "./features/skills/skils";
 export default function Home() {
 
 
-  const handleScroll = () => {
-    const element = document.getElementById('experience');
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-
   const socialLinks = (
     <div className={styles.socialLinks}>
       <button >
@@ -44,32 +35,37 @@ export default function Home() {
     </div>
   )
 
-  const nextLink = (
-    <div className={styles['next-link']}>
-      <span onClick={handleScroll}>WORK HISTORY</span>
-      <div className={styles['next-link__line']} ></div>
-    </div>
-  );
 
   const heroSection = (
     <div className={styles['hero-section']}>
-      <div className={styles.name}>Sheetal Dadhich</div>
-      {nextLink}
+      <div className={styles.name}>
+        <h1>Hello,</h1>
+        <h1>I'm Sheetal.</h1>
+      </div>
     </div>
   );
 
   return (
     <>
-      <section className={styles.main}>
-        {socialLinks}
-        {heroSection}
-      </section>
-      <section id="experience">
-        <Experiences />
-      </section>
-      <section id="skills">
-        <Skills />
-      </section>
+      <div className={styles.animation_wrapper}>
+        <div className={`${styles.particle} ${styles.particle_1}`}></div>
+        <div className={`${styles.particle} ${styles.particle_2}`}></div>
+        <div className={`${styles.particle} ${styles.particle_3}`}></div>
+        <div className={`${styles.particle} ${styles.particle_4}`}></div>
+      </div>
+
+      <div className="page_wrapper">
+        <section className={styles.main}>
+          {socialLinks}
+          {heroSection}
+        </section>
+        <section id="experience">
+          <Experiences />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+      </div>
 
     </>
   );

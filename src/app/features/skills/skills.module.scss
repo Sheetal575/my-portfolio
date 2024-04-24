@@ -1,4 +1,38 @@
 .skills{
-    height: 100%;
+    height: max-content;
     background-color: black;
+    padding: 4em 0px;
+    display: grid;
+    justify-items: center;
+    &>div:nth-child(1){
+        width: 70vw;
+       
+    }
+}
+.heading{
+    font-size: 1.7em;
+    font-weight: 700;
+
+    margin-bottom: 1em;
+    display: flex;
+    gap: 0.5em;
+    color: white;
+    align-items: center;
+
+    &__line{
+        height: 4px;
+        background-image: linear-gradient(to right, white,rgba(139, 134, 134, 0.307));
+        animation: lineWidth 4s linear forwards;
+        // background-color: black;
+    }
+
+    @keyframes lineWidth {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 56vw;
+        }
+        
+    }
 }
