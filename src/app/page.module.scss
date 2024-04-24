@@ -130,7 +130,7 @@
 
 /* Config */
 $color-bg: white;
-$color-particle: rgba(128, 128, 128, 0.121);
+$color-particle: rgba(185, 177, 177, 0.179);
 $spacing: 2560px;
 $time-1: 60s;
 $time-2: 120s;
@@ -165,33 +165,33 @@ $time-4: 200s;
 
 .particle_1 {
   animation: animParticle $time-1 liner infinite;
-  @include particles(100);
+  @include particles(80);
   height: 7px;
   width: 7px;
   
 }
 
 .particle_1:after {
-  @include particles(100);
+  @include particles(80);
   height: 7px;
   width: 7px;
 }
 
 .particle_2 {
   animation: animParticle $time-2 linear infinite;
-  @include particles(100);
+  @include particles(80);
   height: 7px;
   width: 7px;
 }
 
 .particle_2:after {
-  @include particles(100);
+  @include particles(80);
   height: 7px;
   width: 7px;
 }
 
 .particle_3:after {
-  @include particles(100);
+  @include particles(80);
   height: 7px;
   width: 7px;
   border-radius: 50%;
@@ -199,14 +199,14 @@ $time-4: 200s;
 
 .particle_4 {
   animation: animParticle $time-4 linear infinite;
-  @include particles(100);
+  @include particles(80);
   height: 7px;
   width: 7px;
   
 }
 
 .particle_4:after {
-  @include particles(100);
+  @include particles(80);
   height: 7px;
   width: 7px;
 }

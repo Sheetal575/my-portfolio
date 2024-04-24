@@ -1,0 +1,27 @@
+.contact{
+    background-color: white;
+    height: 35vh;
+    width: 70vw;
+    color: black;
+    border-radius: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 5%;
+
+    &>div:nth-child(1){
+        font-size: 1.6em;
+        display: grid;
+        gap: 1em;
+    }
+}
+
+.download-button{
+    background-color: black ;
+    color: white;
+    border-radius: 35px;
+    border: none;
+    font-size: medium;
+    padding: 1em;
+    cursor: pointer;
+}

@@ -1,7 +1,7 @@
 .skills{
     height: max-content;
     background-color: black;
-    padding: 4em 0px;
+    padding: 6em 0px;
     display: grid;
     justify-items: center;
     &>div:nth-child(1){
@@ -15,7 +15,7 @@
     font-size: 1.7em;
     font-weight: 700;
 
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
     display: flex;
     gap: 0.5em;
     color: white;
@@ -39,9 +39,20 @@
     }
 }
 
+.subHeading{
+    color: rgba(255, 255, 255, 0.772);
+    font-size: 3rem;
+
+}
+
 .skills__ball{
+    margin-top: 6em;
+    margin-bottom: 6em;
     display: flex;
     flex-wrap: wrap;
     width: 70vw;
-    gap: 3px;
+    gap: 5em;
+    &>div{
+        width: 130px;
+    }
 }

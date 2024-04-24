@@ -1,5 +1,6 @@
-import { BallCanvas } from "../components/canvas"
+import { BallCanvas } from "../../components/canvas"
 import { technologies } from "../constants"
+import { Contact } from "../contact/contact"
 import styles from "./skills.module.scss"
 export const Skills = () => {
     return (
@@ -9,7 +10,7 @@ export const Skills = () => {
                     Skills
                     <div className={styles.heading__line} />
                 </div>
-                <div>
+                <div className={styles['subHeading']}>
                     Technologies & Tools
                 </div>
             </div>
@@ -19,8 +20,8 @@ export const Skills = () => {
                         <BallCanvas icon={technology.icon} />
                     </div>
                 ))}
-
             </div>
+            <Contact />
         </div>
     )
 }

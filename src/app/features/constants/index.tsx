@@ -1,4 +1,4 @@
-import { css, figma, git, graphql, html, javascript, nodejs, postgresql, reactjs, redux, tailwind, typescript } from "../assets";
+import { css, figma, git, graphql, html, javascript, nodejs, postgresql, reactjs, redux, tailwind, typescript } from "../../assets";
 
 const technologies = [
     {
