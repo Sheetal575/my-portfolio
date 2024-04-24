@@ -8,6 +8,8 @@
         width: 70vw;
        
     }
+
+  
 }
 .heading{
     font-size: 1.7em;
@@ -35,4 +37,11 @@
         }
         
     }
+}
+
+.skills__ball{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    gap: 3px;
 }
