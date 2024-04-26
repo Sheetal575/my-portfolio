@@ -1,4 +1,4 @@
-import styles from "./experiences.module.css"
+import styles from "./experiences.module.scss"
 
 const experiences = [
   {
