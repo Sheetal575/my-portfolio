@@ -1,122 +1,120 @@
 
 
-// .main {
-//   overflow-y: scroll;
-//   scroll-snap-type: y mandatory;
-//   color: black;
-// }
+.main {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  color: black;
+}
 
-// .hero-section {
-//   position: relative;
-//   height: 70vh;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
+.hero-section {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-// .name {
-//   font-size: 3em;
-//   font-weight: 500;
-//   width: 70vw;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: start;
-//   flex: 1;
+.name {
+  font-size: 3em;
+  font-weight: 500;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex: 1;
  
-// }
+}
 
-// .socialLinks {
-//   position: absolute;
-//   top: 35%;
-//   transform: translate(0, -50%);
-//   left: 1rem;
+.socialLinks {
+  position: absolute;
+  top: 35%;
+  transform: translate(0, -50%);
+  left: 1rem;
 
-//   display: flex;
-//   flex-direction: column;
-//   gap: 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
 
-//   &>button {
-//     padding: 1rem;
-//     background-color: transparent;
-//     border: none;
-//     border-radius: 50%;
+  &>button {
+    padding: 1rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+  }
 
-//     // border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-//   }
+}
 
-// }
+.scroll-button {
+  background-color: transparent;
+  border: none !important;
+  padding: 1.2rem 0.3rem 0.3rem 0.3rem;
+  border-radius: 45% !important;
+  border: 2px solid black !important;
+  margin-bottom: 3rem;
+  cursor: pointer;
 
-// .scroll-button {
-//   background-color: transparent;
-//   border: none !important;
-//   padding: 1.2rem 0.3rem 0.3rem 0.3rem;
-//   border-radius: 45% !important;
-//   border: 2px solid black !important;
-//   margin-bottom: 3rem;
-//   cursor: pointer;
+  &>img {
+    transform: rotateX(180deg);
+    animation: bounceOnce 4s linear 4s 5;
 
-//   &>img {
-//     transform: rotateX(180deg);
-//     animation: bounceOnce 4s linear 4s 5;
+  }
 
-//   }
+  @keyframes bounceOnce {
+    0% {
+      transform: translateY(0) rotateX(180deg);
+    }
 
-//   @keyframes bounceOnce {
-//     0% {
-//       transform: translateY(0) rotateX(180deg);
-//     }
+    50% {
+      transform: translateY(-7px) rotateX(180deg);
+    }
 
-//     50% {
-//       transform: translateY(-7px) rotateX(180deg);
-//     }
-
-//     100% {
-//       transform: translateY(0) rotateX(180deg);
-//     }
-//   }
+    100% {
+      transform: translateY(0) rotateX(180deg);
+    }
+  }
 
 
-// }
+}
 
-// .next-link {
-//   position: absolute;
-//   bottom: 0;
-//   display: grid;
-//   justify-items: center;
-//   &>span {
-//     font-size: 1rem;
-//     cursor: pointer;
-//   }
+.next-link {
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  justify-items: center;
+  &>span {
+    font-size: 1rem;
+    cursor: pointer;
+  }
 
 
 
-//   &__line{
-//     content: "hjhj";
-//     width: 3px;
-//     height: 0vh;
-//     background-color: black;
+  &__line{
+    content: "hjhj";
+    width: 3px;
+    height: 0vh;
+    background-color: black;
    
-//     transform-origin: left;
-//     line-height: 1.5em;
-//     animation: draw 3s linear forwards 1;
-//   }
+    transform-origin: left;
+    line-height: 1.5em;
+    animation: draw 3s linear forwards 1;
+  }
 
-//   @keyframes draw {
-//     0% {
-//       height: 0vh;
-//     }
+  @keyframes draw {
+    0% {
+      height: 0vh;
+    }
 
-//     100% {
-//       height: 4vh;
-//     }
-//   }
-// }
+    100% {
+      height: 4vh;
+    }
+  }
+}
 
-// .snap-section{
-//    scroll-snap-align: start;
-// }
+.snap-section{
+   scroll-snap-align: start;
+}
 
 
 // $color-bg: white;
@@ -127,7 +125,6 @@
 // $time-3: 180s;
 // $time-4: 200s;
 
-// /* mixins */
 //  @function particles($max) {
 //   $val: 0px 0px $color-particle;
 //   @for $i from 1 through $max {
