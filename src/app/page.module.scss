@@ -117,86 +117,85 @@
 }
 
 
-// $color-bg: white;
-// $color-particle: rgba(185, 177, 177, 0.179);
-// $spacing: 2560px;
-// $time-1: 60s;
-// $time-2: 120s;
-// $time-3: 180s;
-// $time-4: 200s;
+$color-bg: white;
+$color-particle: rgba(185, 177, 177, 0.179);
+$spacing: 2560px;
+$time-1: 60s;
+$time-2: 120s;
+$time-3: 180s;
+$time-4: 200s;
 
-//  @function particles($max) {
-//   $val: 0px 0px $color-particle;
-//   @for $i from 1 through $max {
-//      $val: #{$val}, random($spacing)+px random($spacing)+px $color-particle;
-//   }
-//  @return $val;
-// }
+ @function particles($max) {
+  $val: 0px 0px $color-particle;
+  @for $i from 1 through $max {
+     $val: #{$val}, random($spacing)+px random($spacing)+px $color-particle;
+  }
+ @return $val;
+}
 
-//  @mixin particles($max) {
-//    box-shadow: particles($max);
-//    border-radius: 50%;
-//  }
+ @mixin particles($max) {
+   box-shadow: particles($max);
+   border-radius: 50%;
+ }
 
 
-// .particle, .particle:after {
+.particle, .particle:after {
  
-//   background: transparent;
-// }
+  background: transparent;
+}
 
-// .particle:after {
-//   position: absolute;
-//   content: "";
-//   top: $spacing;
-// }
+.particle:after {
+  position: absolute;
+  top: $spacing;
+}
 
-// .particle_1 {
-//   animation: animParticle $time-1 liner infinite;
-//   @include particles(80);
-//   height: 7px;
-//   width: 7px;
+.particle_1 {
+  // animation: animParticle $time-1 liner infinite;
+  @include particles(80);
+  height: 7px;
+  width: 7px;
   
-// }
+}
 
-// .particle_1:after {
-//   @include particles(80);
-//   height: 7px;
-//   width: 7px;
-// }
+.particle_1:after {
+ // @include particles(80);
+  height: 7px;
+  width: 7px;
+}
 
-// .particle_2 {
-//   animation: animParticle $time-2 linear infinite;
-//   @include particles(80);
-//   height: 7px;
-//   width: 7px;
-// }
+.particle_2 {
+ // animation: animParticle $time-2 linear infinite;
+  @include particles(80);
+  height: 7px;
+  width: 7px;
+}
 
-// .particle_2:after {
-//   @include particles(80);
-//   height: 7px;
-//   width: 7px;
-// }
+.particle_2:after {
+ //  @include particles(80);
+  height: 7px;
+  width: 7px;
+}
 
-// .particle_3:after {
-//   @include particles(80);
-//   height: 7px;
-//   width: 7px;
-//   border-radius: 50%;
-// }
+.particle_3:after {
+ // @include particles(80);
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+}
 
-// .particle_4 {
-//   animation: animParticle $time-4 linear infinite;
-//   @include particles(80);
-//   height: 7px;
-//   width: 7px;
+.particle_4 {
+ // animation: animParticle $time-4 linear infinite;
+  @include particles(80);
+  height: 7px;
+  width: 7px;
   
-// }
+}
 
-// .particle_4:after {
-//   @include particles(80);
-//   height: 7px;
-//   width: 7px;
-// }
+.particle_4:after {
+  @include particles(80);
+  height: 7px;
+  width: 7px;
+}
 
 // @keyframes animParticle {
 //   from {
@@ -207,11 +206,11 @@
 //   }
 // }
 
-// .page_wrapper {
-//   text-align: center;
-//   color: #fff;
-//   z-index: 2;
-// }
+.page_wrapper {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
 
 
 
