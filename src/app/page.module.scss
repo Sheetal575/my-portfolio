@@ -166,7 +166,7 @@ $time-4: 200s;
   @include particles(80);
   height: 7px;
   width: 7px;
-  // animation: animParticle $time-2 linear infinite;
+  animation: animParticle $time-2 linear infinite;
 }
 
 .particle_2:after {
