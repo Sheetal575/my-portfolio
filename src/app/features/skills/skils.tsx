@@ -1,7 +1,8 @@
 import { BallCanvas } from "../../components/canvas"
 import { technologies } from "../constants"
 import { Contact } from "../contact/contact"
-import styles from "./skills.module.scss"
+import styles from "./skills.module.css"
+
 export const Skills = () => {
     return (
         <div className={styles.skills}>

@@ -1,4 +1,4 @@
-import styles from "./experiences.module.scss";
+import styles from "./experiences.module.css"
 
 const experiences = [
   {
@@ -23,8 +23,6 @@ const experiences = [
 
 
 export const Experiences = () => {
-
-
 
   return (
     <div className={styles['experience-box']}>

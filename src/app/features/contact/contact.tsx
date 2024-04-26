@@ -1,4 +1,4 @@
-import styles from "./contact.module.scss"
+import styles from "./contact.module.css"
 export const Contact = () => {
     return (
         <div className={styles.contact}>

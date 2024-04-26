@@ -3,7 +3,6 @@ import { Span } from "next/dist/trace";
 import { useEffect, useState } from "react";
 import { Experiences } from "./features/experiences/experiences";
 import styles from "./page.module.scss";
-import Image from "next/image";
 import { Skills } from "./features/skills/skils";
 
 export default function Home() {
