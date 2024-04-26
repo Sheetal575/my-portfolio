@@ -34,8 +34,8 @@ export const Experiences = () => {
       </div>
       <div className={styles.experience}>
         <div>
-          {experiences.map((data) => (
-            <div>
+          {experiences.map((data, index) => (
+            <div key = {index}>
               <div className={styles['experience--date']}>{data?.date}</div>
               <div>
                 <div className={styles['experience--title']}>{data?.title}</div>

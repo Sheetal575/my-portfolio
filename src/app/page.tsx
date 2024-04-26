@@ -37,10 +37,10 @@ export default function Home() {
 
 
   const heroSection = (
-    <div className={styles['hero-section']}>
+    <div className={styles["hero-section"]}>
       <div className={styles.name}>
         <h1>Hello,</h1>
-        <h1>I'm Sheetal.</h1>
+        <h1>I&apos;m Sheetal.</h1>
       </div>
     </div>
   );
