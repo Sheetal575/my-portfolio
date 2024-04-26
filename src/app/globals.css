@@ -10,15 +10,10 @@
 html,
 body {
   max-width: 100vw;
- 
-
 }
 
 body {
-  /* background-color: white; */
-
   background-color: white;
-  /* background-image: linear-gradient(276deg, #f1ebdee6, rgb(242, 238, 228)); */
   color: black;
  
 }
@@ -30,12 +25,6 @@ body::-webkit-scrollbar {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
 
 
