@@ -150,44 +150,44 @@ $time-4: 200s;
 }
 
 .particle_1 {
-  // animation: animParticle $time-1 liner infinite;
   @include particles(80);
   height: 7px;
   width: 7px;
-  
+  // animation: animParticle $time-1 liner infinite;
 }
 
 .particle_1:after {
- // @include particles(80);
+ @include particles(80);
   height: 7px;
   width: 7px;
 }
 
 .particle_2 {
- // animation: animParticle $time-2 linear infinite;
+  @include particles(80);
+  height: 7px;
+  width: 7px;
+  // animation: animParticle $time-2 linear infinite;
+}
+
+.particle_2:after {
   @include particles(80);
   height: 7px;
   width: 7px;
 }
 
-.particle_2:after {
- //  @include particles(80);
-  height: 7px;
-  width: 7px;
-}
-
 .particle_3:after {
- // @include particles(80);
+ @include particles(80);
   height: 7px;
   width: 7px;
   border-radius: 50%;
 }
 
 .particle_4 {
- // animation: animParticle $time-4 linear infinite;
+ 
   @include particles(80);
   height: 7px;
   width: 7px;
+  animation: animParticle $time-4 linear infinite;
   
 }
 
@@ -197,14 +197,14 @@ $time-4: 200s;
   width: 7px;
 }
 
-// @keyframes animParticle {
-//   from {
-//     transform: translateY(0px);
-//   }
-//   to {
-//     transform: translateY($spacing * -1);
-//   }
-// }
+@keyframes animParticle {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY($spacing * -1);
+  }
+}
 
 .page_wrapper {
   text-align: center;
