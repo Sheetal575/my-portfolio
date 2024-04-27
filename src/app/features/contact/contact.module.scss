@@ -5,13 +5,18 @@
     color: black;
     border-radius: 34px;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     padding: 0% 5%;
 
     &>div:nth-child(1){
         font-size: 1.6em;
         display: grid;
+        gap: 1em;
+    }
+
+    &__button{
+        display: flex;
         gap: 1em;
     }
 }
@@ -24,4 +29,29 @@
     font-size: medium;
     padding: 1em;
     cursor: pointer;
+}
+
+.email_button{
+    background-color: white ;
+    color: black;
+    border: 1px solid black !important;
+    border-radius: 35px;
+    font-size: medium;
+    padding: 1em;
+}
+
+@media only screen and (max-width: 770px) {
+    .contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0% 0%;
+        height: 25vh;
+        &__button{
+            display: grid;
+            gap: 1em;
+        }
+    }
+   
+    
 }

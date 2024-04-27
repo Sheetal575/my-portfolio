@@ -12,7 +12,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 2em;
   align-items: center;
+  &>div:nth-child(2){
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2em;
+    width: 70vw;
+  }
 }
 
 .name {
@@ -23,100 +31,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  flex: 1;
  
 }
 
-.socialLinks {
-  position: absolute;
-  top: 35%;
-  transform: translate(0, -50%);
-  left: 1rem;
-
-  display: flex;
-  flex-direction: column;
-  gap: 0rem;
-
-  &>button {
-    padding: 1rem;
-    background-color: transparent;
-    border: none;
-    border-radius: 50%;
-  }
-
-}
-
-.scroll-button {
+.social-button{
   background-color: transparent;
-  border: none !important;
-  padding: 1.2rem 0.3rem 0.3rem 0.3rem;
-  border-radius: 45% !important;
-  border: 2px solid black !important;
-  margin-bottom: 3rem;
   cursor: pointer;
-
-  &>img {
-    transform: rotateX(180deg);
-    animation: bounceOnce 4s linear 4s 5;
-
-  }
-
-  @keyframes bounceOnce {
-    0% {
-      transform: translateY(0) rotateX(180deg);
-    }
-
-    50% {
-      transform: translateY(-7px) rotateX(180deg);
-    }
-
-    100% {
-      transform: translateY(0) rotateX(180deg);
-    }
-  }
-
-
-}
-
-.next-link {
-  position: absolute;
-  bottom: 0;
-  display: grid;
-  justify-items: center;
-  &>span {
-    font-size: 1rem;
-    cursor: pointer;
-  }
-
-
-
-  &__line{
-    content: "hjhj";
-    width: 3px;
-    height: 0vh;
-    background-color: black;
-   
-    transform-origin: left;
-    line-height: 1.5em;
-    animation: draw 3s linear forwards 1;
-  }
-
-  @keyframes draw {
-    0% {
-      height: 0vh;
-    }
-
-    100% {
-      height: 4vh;
-    }
-  }
-}
-
-.snap-section{
-   scroll-snap-align: start;
+  margin: 0px;
+  padding: 0px !important;
+  border: none;
+  outline: none;
 }
 
 
+/* Config */
 $color-bg: white;
 $color-particle: rgba(185, 177, 177, 0.179);
 $spacing: 2560px;
@@ -125,18 +53,19 @@ $time-2: 120s;
 $time-3: 180s;
 $time-4: 200s;
 
- @function particles($max) {
+/* mixins */
+@function particles($max) {
   $val: 0px 0px $color-particle;
   @for $i from 1 through $max {
-     $val: #{$val}, random($spacing)+px random($spacing)+px $color-particle;
+    $val: #{$val}, random($spacing)+px random($spacing)+px $color-particle;
   }
- @return $val;
+  @return $val;
 }
 
- @mixin particles($max) {
-   box-shadow: particles($max);
-   border-radius: 50%;
- }
+@mixin particles($max) {
+  box-shadow: particles($max);
+  border-radius: 50%;
+}
 
 
 .particle, .particle:after {
@@ -146,27 +75,29 @@ $time-4: 200s;
 
 .particle:after {
   position: absolute;
+  content: "";
   top: $spacing;
 }
 
 .particle_1 {
+  animation: animParticle $time-1 liner infinite;
   @include particles(80);
   height: 7px;
   width: 7px;
-  animation: animParticle $time-1 linear infinite;
+  
 }
 
 .particle_1:after {
- @include particles(80);
+  @include particles(80);
   height: 7px;
   width: 7px;
 }
 
 .particle_2 {
+  animation: animParticle $time-2 linear infinite;
   @include particles(80);
   height: 7px;
   width: 7px;
-  animation: animParticle $time-2 linear infinite;
 }
 
 .particle_2:after {
@@ -176,18 +107,17 @@ $time-4: 200s;
 }
 
 .particle_3:after {
- @include particles(80);
+  @include particles(80);
   height: 7px;
   width: 7px;
   border-radius: 50%;
 }
 
 .particle_4 {
- 
+  animation: animParticle $time-4 linear infinite;
   @include particles(80);
   height: 7px;
   width: 7px;
-  animation: animParticle $time-4 linear infinite;
   
 }
 
@@ -213,4 +143,10 @@ $time-4: 200s;
 }
 
 
+@media only screen and (max-width: 600px) {
+  .name{
+    font-size: 2em;
+  }
+
+}
 
