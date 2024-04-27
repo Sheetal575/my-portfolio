@@ -80,7 +80,7 @@ $time-4: 200s;
 }
 
 .particle_1 {
-  animation: animParticle $time-1 liner infinite;
+  animation: animParticle $time-1 linear infinite;
   @include particles(80);
   height: 7px;
   width: 7px;
