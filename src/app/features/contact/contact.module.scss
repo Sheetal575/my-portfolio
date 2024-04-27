@@ -45,8 +45,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0% 0%;
-        height: 25vh;
+        padding: 1.5em;
+        height: max-content;
+        &>div:nth-child(1){
+            font-size: 1.2em;
+            display: grid;
+            gap: 1em;
+        }
         &__button{
             display: grid;
             gap: 1em;
