@@ -42,11 +42,6 @@ export default function Home() {
 
   return (
     <>
-    <SEO
-        title="Sheetal Dadhich | Software Developer"
-        description="Get funding for your startup from India&#39;s leading Revenue Based Financing platform. Get a soft sanction with no equity dilution."
-        url="https://shetal.me/"
-      />
       <div className={styles.animation_wrapper}>
         <div className={`${styles.particle} ${styles.particle_1}`}></div>
         <div className={`${styles.particle} ${styles.particle_2}`}></div>
