@@ -91,6 +91,7 @@
 
     &__line{
         height: 4px;
+        flex:1;
         background-image: linear-gradient(to right, black,rgba(139, 134, 134, 0.513));
         animation: lineWidth 4s linear forwards;
     }
