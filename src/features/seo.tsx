@@ -10,7 +10,7 @@ const SEO = ({ description, title, url }: any) => {
     <>
       <title>{seoTitle}</title>
       <meta name="description" content={seoDescription} />
-      <meta name="keywords" content="Sheetal Dadhich, software developer, web development, frontend developer, modern web technologies, high-performance applications" />
+      <meta name="keywords" content="Sheetal Dadhich, software developer, web development, frontend developer, modern web technologies, high-performance applications, reactjs developer" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={seoDescription} />
       <meta property="og:type" content="website" />

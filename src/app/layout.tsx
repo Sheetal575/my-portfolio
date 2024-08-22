@@ -14,7 +14,7 @@ export default function RootLayout({
        <head>
         <SEO
           title="Sheetal Dadhich | Software Developer"
-          description="Get funding for your startup from India's leading Revenue Based Financing platform. Get a soft sanction with no equity dilution."
+          description="Frontend expert delivering responsive, efficient web application with modern technologies and intuitive user interfaces. "
           url="https://shetal.me/"
         />
       </head>
