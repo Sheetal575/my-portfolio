@@ -1,7 +1,7 @@
 import styles from "./contact.module.scss";
 export const Contact = () => {
   const handleDownloadResume = () => {
-    window.open("https://shorturl.at/244MY", "_blank");
+    window.open("https://shorturl.at/p6DXM", "_blank");
   };
 
   return (
