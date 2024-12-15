@@ -1,10 +1,14 @@
 .experience {
     width: 70vw;
-    padding: 6em 0em;
+    padding: 4em 0em;
     display: grid;
     justify-items: center;
     align-items: center;
     position: relative;
+    animation-name: experienceFade, experienceScale;
+    animation-duration: 5ms;
+    animation-timing-function: ease;
+    animation-timeline: view();
 
     &>div:nth-child(1){
         display: grid;
@@ -23,27 +27,27 @@
 
     &--date{
         font-size: 14px;
-        color: grey;
+        color: rgb(77, 77, 77);
         margin-top: 1em;
 
     }
 
     &--title{
-        font-size: 2.3em;
+        font-size: 2em;
         margin-bottom: 0.5rem;
  
     }
 
     &--company{
         font-size: 1.2em;
-        font-weight: 700;
-        color: grey;
+        font-weight: 600;
+        color: rgb(77, 77, 77);
     }
 
     &--description{
         width: 50vw;
         line-height: 30px;
-        font-size: 1.2em;
+        font-size: 18px;
         margin-top: 2rem;
     }
 
@@ -65,7 +69,7 @@
 
         &--description{
             width: 100%;
-            font-size: 1em ;
+            font-family: 14px;
             line-height: 1.6em;
         }
 
@@ -89,20 +93,45 @@
     gap: 0.5em;
     align-items: center;
 
+    &>div:nth-child(1){
+        min-width: max-content
+    }
+
     &__line{
         height: 4px;
-        flex:1;
         background-image: linear-gradient(to right, black,rgba(139, 134, 134, 0.513));
-        animation: lineWidth 4s linear forwards;
+        animation-name: lineWidth;
+        animation-duration: 1ms;
+        animation-direction: alternate;
+        animation-timing-function: ease;
+        animation-timeline: scroll();
     }
 
     @keyframes lineWidth {
         0%{
             width: 0%;
         }
-        100%{
-            width: 56vw;
+        70%{
+            width: 100%;
         } 
+    }
+}
+
+@keyframes experienceFade {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes experienceScale {
+    0% {
+        transform: scale(0.97);
+    }
+    100% {
+        transform: scale(1); 
     }
 }
 
@@ -130,6 +159,6 @@
     }
 
     .experience{
-        padding: 4em 0em;
+        padding: 2em 0em;
     }
 }
