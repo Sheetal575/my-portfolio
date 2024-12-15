@@ -1,6 +1,4 @@
-Here’s a concise and professional README tailored for your portfolio site:
 
----
 
 # Portfolio - [Sheetal Dadhich](https://shetal.me/)
 
