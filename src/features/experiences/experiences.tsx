@@ -3,21 +3,24 @@ import styles from "./experiences.module.scss"
 const experiences = [
   {
     date: "JANUARY 2023 - PRESENT",
-    title: "Software Developer",
+    title: "Software Developer 1",
     company: "Klubworks",
-    description: "Automated critical processes, reducing manual efforts up to 100% through file parsing, consent integration, and workflow monitoring solutions. Leveraged Zeebe workflow automation to accelerate disbursement by 65% for risk, growth, and business development tasks. Developed reusable component libraries and platforms for offer generation, review, document sharing, and investment monitoring."
+    description:  <p>Responsible for frontend developement of internal application <b>Portal</b> with open source <b>Camunda Workflow</b> which helps business team to do their task and easy tracking,&nbsp;
+    <b>Klub AI</b>, platform for easy onboarding for brands and better UX for data visualization and real-time chat functionality,&nbsp;
+    <b>Component Library</b> with 20+ reusable UI components, ensuring consistent design language, improved developer productivity, and enhanced cross-application user experience.
+    </p>
   },
   {
     date: "JANUARY 2022 - DECEMBER 2023",
     title: "Software Developer Intern",
     company: "Viga Entertainment Pvt Ltd",
-    description: "Developed a comprehensive video editing solution featuring a shot sequencer for seamless import, rearrangement, and deletion of shots, improving overall visualization using ReactJS."
+    description: "Focused on developing responsive frontend features, including video visualization tools, 3D modal viewers with react-three/fibre, responsive task management views including table, card , gantt to track tasks and application settings to customise features."
   },
   {
     date: "MAY 2022 - JULY 2022",
     title: "Software Developer Intern",
     company: "TruckBuddy",
-    description: "Developed a logistics Dashboard using AngularJS for tracking trucks, reports, settlements, and customer logistics details."
+    description: "Developed logistics management dashboards and interfaces to track truck reports, manage driver statuses, and streamline operational processes using frontend technologies."
   }
 ]
 
@@ -27,7 +30,7 @@ export const Experiences = () => {
   return (
     <div className={styles['experience-box']}>
       <div className={styles.heading}>
-        Work History
+        <div>Work History</div>
         <div className={styles.heading__line} />
       </div>
       <div className={styles.experience}>
